@@ -140,7 +140,7 @@ Parameters:
 	-R		: Choose random server, (default: use latency)
 	-fs ch		: Output CSV format, using "ch" as field separator
 	-csv		: Output CSV - same as "-fs ,"
-	-k		: Terminate curl/wget with "killall"
+	-k		: Terminate curl/wget/nc with "killall"
 	-32		: Use 32-bit calculations. Limits max speed,
 			  but works for non-64 bit shells
 	-ds downsize	: Download resource size, (default $downsz)
