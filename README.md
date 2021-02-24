@@ -20,6 +20,5 @@ though a fallback to "ifconfig" is also attempted if "ip" fails.
 For platforms with low storage, you can save space by stripping comments
 and some of the verbose help with something like this:
 
-  $ ( head -n 26 speedtest.sh; tail -n $(($(cat speedtest.sh | wc -l) - 26)) \
-  speedtest.sh | sed '/^[ \t]*#/d;/^#$/d;/^$/d' ) > speedtest-min.sh
+    $ ( head -n 26 speedtest.sh; tail -n $(($(cat speedtest.sh | wc -l) - 26)) speedtest.sh | sed '/^[ \t]*#/d;/^#$/d;/^$/d' ) > speedtest-min.sh
 
