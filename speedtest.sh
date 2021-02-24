@@ -175,7 +175,7 @@ Parameters:
 # If your version of curl/wget does not support redirects, you may need to
 # override the default URL. You can find the appropriate URL by copying the
 # redirected URL from the address bar of your browser.
-#
+# 
 # If you are using netcat (nc) instead of curl/wget, then you will need to
 # specify the [-s server] and [-d device] options, since nc cannot fetch the
 # HTTPS resources needed to populate the client and server config files.
