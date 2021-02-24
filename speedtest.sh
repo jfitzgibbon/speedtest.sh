@@ -509,12 +509,12 @@ getlatlon() {
 listnearby() {
 	grep -F " id=" "$serv_file" | \
 	sed 's/.* lat="\([^"]*\)" lon="\([^"]*\)".* id="\([^"]*\)".*/\3 \1 \2/' | \
-	awk -v s=" " "$calcdist" | sort -n | head -n$servcnt | cut -d' ' -f2
+	awk -v s=" " "$calcdist" | sort -n | head -n $servcnt | cut -d' ' -f2
 }
 
 getnearest() {
 	if [ $randserv -eq 1 ]; then
-		serv_id=$(listnearby | head -n$(($(getrand) % servcnt + 1)) | tail -1)
+		serv_id=$(listnearby | head -n $(($(getrand) % servcnt + 1)) | tail -n 1)
 	else
 		nearest_serv_id=
 		best_latency=999999999
